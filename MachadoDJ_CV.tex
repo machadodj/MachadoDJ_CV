@@ -1,0 +1,41 @@
+% Compile with pdfLaTeX
+
+\documentclass[11pt, letterpaper, roman, twoside]{moderncv}
+    \moderncvstyle{classic}
+    \moderncvcolor{black}
+    \renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hanging}
+\usepackage{geometry}
+    \geometry{
+        left=3cm,
+        right=2cm,
+        top=2cm,
+        bottom=3.5cm,
+        heightrounded,
+    }
+%
+% \title{Curriculum Vit\ae{}}
+%
+\input{tex/personal_information.tex}
+\input{tex/header_and_footer.tex}
+%
+\begin{document}
+    \thispagestyle{empty}
+    \maketitle
+%
+\input{tex/preamble.tex}
+\input{tex/education.tex}
+\input{tex/positions.tex}
+\input{tex/awards.tex}
+\input{tex/publications.tex}
+\input{tex/funding.tex}
+\input{tex/events.tex}
+\input{tex/teach.tex}
+\input{tex/short.tex}
+\input{tex/reviews.tex}
+\input{tex/skills.tex}
+\input{tex/references.tex}
+%
+\end{document}
