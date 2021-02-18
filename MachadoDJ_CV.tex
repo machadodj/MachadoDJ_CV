@@ -1,6 +1,6 @@
 % Compile with pdfLaTeX
 
-\documentclass[11pt, letterpaper, roman, twoside]{moderncv}
+\documentclass[11pt, letterpaper, roman]{moderncv}
     \moderncvstyle{classic}
     \moderncvcolor{blue}
     \renewcommand{\familydefault}{\sfdefault}
@@ -9,33 +9,33 @@
 \usepackage{hanging}
 \usepackage{geometry}
     \geometry{
-        left=3cm,
-        right=2cm,
-        top=2cm,
-        bottom=3.5cm,
-        heightrounded,
-    }
+		left=2.5cm,
+		right=1.5cm,
+		top=2.5cm,
+		bottom=3cm,
+		heightrounded,
+	} % Reduce document margins
 %
 % \title{Curriculum Vit\ae{}}
 %
-\input{tex/personal_information.tex}
-\input{tex/header_and_footer.tex}
+\input{tex/00_personal_information.tex}
+\input{tex/00_header_and_footer.tex}
 %
 \begin{document}
     \thispagestyle{empty}
     \maketitle
 %
-\input{tex/preamble.tex} % Revised on July 24, 2020
-\input{tex/education.tex} % Revised on July 24, 2020
-\input{tex/positions.tex} % Revised on July 24, 2020
-\input{tex/awards.tex} % Revised on July 24, 2020
-\input{tex/publications.tex} % Revised on July 24, 2020
-\input{tex/funding.tex} % Revised on July 24, 2020
-\input{tex/events.tex} % Revised on July 24, 2020
-\input{tex/teach.tex} % Revised on July 24, 2020
-\input{tex/short.tex} % Revised on July 24, 2020
-\input{tex/reviews.tex} % Revised on July 24, 2020
-\input{tex/skills.tex} % Revised on July 24, 2020
-\input{tex/references.tex} % Revised on July 24, 2020
+\input{tex/01_preamble.tex} % Revised on July 24, 2020
+\input{tex/02_education.tex} % Revised on July 24, 2020
+\input{tex/03_positions.tex} % Revised on July 24, 2020
+\input{tex/04_awards.tex} % Revised on July 24, 2020
+\input{tex/05_publications.tex} % Revised on July 24, 2020
+\input{tex/06_funding.tex} % Revised on July 24, 2020
+\input{tex/07_events.tex} % Revised on July 24, 2020
+\input{tex/08_teach.tex} % Revised on July 24, 2020
+\input{tex/10_short.tex} % Revised on July 24, 2020
+\input{tex/11_reviews.tex} % Revised on July 24, 2020
+\input{tex/12_skills.tex} % Revised on July 24, 2020
+% \input{tex/13_references.tex} % Revised on July 24, 2020
 %
 \end{document}

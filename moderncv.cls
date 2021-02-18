@@ -241,10 +241,10 @@
 \newcommand*{\extrainfo}[1]{\def\@extrainfo{#1}}
 
 % colors
-\definecolor{color0}{rgb}{0,0,0}% main default color, normally left to black
-\definecolor{color1}{rgb}{0,0,0}% primary theme color
-\definecolor{color2}{rgb}{0,0,0}% secondary theme color
-\definecolor{color3}{rgb}{0,0,0}% tertiary theme color
+\definecolor{color0}{RGB}{0, 0, 0}% black
+\definecolor{color1}{RGB}{14, 77, 140}% UNF Blue
+\definecolor{color2}{RGB}{136, 139, 141}% UNF Grey
+\definecolor{color3}{RGB}{59, 60, 61}% tdark grey
 
 % symbols
 %   itemize labels (the struts were added to correct inter-item spacing (works for single line items, until a solution is found for multi-line ones...)
