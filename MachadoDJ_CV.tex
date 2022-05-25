@@ -1,41 +1,1227 @@
-% Compile with pdfLaTeX
-
-\documentclass[11pt, letterpaper, roman]{moderncv}
-    \moderncvstyle{classic}
-    \moderncvcolor{blue}
-    \renewcommand{\familydefault}{\sfdefault}
-
+\documentclass[11pt, letterpaper, sans]{moderncv}
+    \moderncvstyle{casual}
+    \moderncvcolor{grey}
+\usepackage{multicol}
+\usepackage{enumitem}
 \usepackage[utf8]{inputenc}
 \usepackage{hanging}
 \usepackage{geometry}
     \geometry{
-		left=2.5cm,
-		right=1.5cm,
+		left=2cm,
+		right=2cm,
 		top=2.5cm,
 		bottom=3cm,
 		heightrounded,
 	} % Reduce document margins
-%
-% \title{Curriculum Vit\ae{}}
-%
-\input{tex/00_personal_information.tex}
-\input{tex/00_header_and_footer.tex}
-%
+
+%%%%%%%%%%%%%%%%%%%
+%% PERSONAL DATA %%
+%%%%%%%%%%%%%%%%%%%
+
+\firstname{Denis} \familyname{Jacob~Machado}
+\address{6614 Brentmoor Dr, Apt 828, Charlotte--NC 28262, USA}
+\email{dmachado@uncc.edu}
+\homepage{machadodj.github.io}
+\mobile{(980) 287-9452}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% HEADER AND FOOTER %%
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+    \definecolor{headercolor}{RGB}{136, 139, 141} % UNF Grey
+    \pagestyle{fancy}
+    \fancypagestyle{plain}{\fancyhf{}}
+    \renewcommand{\headrulewidth}{0pt}
+    \headheight 15pt
+    \footskip 45pt
+    \renewcommand{\footrulewidth}{0pt}
+    \newcommand{\helv}{
+    \fontsize{8}{10}\selectfont}
+    \makeatletter
+        \patchcmd{\@fancyhead}{\rlap}{\color{headercolor}\rlap}{}{}
+        \patchcmd{\headrule}{\hrule}{\color{headercolor}\hrule}{}{}
+        \patchcmd{\@fancyfoot}{\rlap}{\color{headercolor}\rlap}{}{}
+        \patchcmd{\footrule}{\hrule}{\color{headercolor}\hrule}{}{}
+        \makeatother
+        \fancyfoot[R]{\color{headercolor}\nouppercase{\helv\small{\thepage}}}
+        \fancyhead[L]{\color{headercolor}\nouppercase{\helv\small{\emph{Curriculum Vit\ae}}}}
+        \fancyhead[R]{\color{headercolor}\nouppercase{\helv\small{Denis Jacob Machado, Ph.D.}}}
+        \nopagenumbers{}
+
+
 \begin{document}
+    \newgeometry{
+		left=2cm,
+		right=2cm,
+		top=1cm,
+		bottom=0.5cm,
+		heightrounded,
+	}
     \thispagestyle{empty}
     \maketitle
+
+%%%%%%%%%%%%%%
+%% PREAMBLE %%
+%%%%%%%%%%%%%%
+
+\vspace{-4.5em}
+
+\begin{itemize}[itemsep=0in, labelindent=0in, leftmargin=*]
+
+% \item \textbf{Bioinformaticist} with strong biology, biostatistics, and programming background.
+% \item Peer-reviewed publications on topics including \textbf{genomics}, \textbf{evolution}, \textbf{parasitology}, \textbf{regeneration}, \textbf{emerging infectious diseases}, and \textbf{genomic epidemiology}.
+% \item $3+$ years of experience using \textbf{machine learning} (e.g., PyTorch, TensorFlow), \textbf{predictive modeling}, \textbf{high-throughput data processing}, and \textbf{data mining} algorithms to solve practical problems.
+% \item $10+$ years of experience in \textbf{molecular biology}, \textbf{high-throughput sequencing} (e.g., Illumina, PacBio, Hi-C, GWAS, and RNA-Seq), and sequence assembly, and differential gene expression analyses.
+% \item Concepts used in my current and past projects include Python, Flask, R, Shiny, Tableu, SQL, Git, Jupyter, AlphaFold2, RoseTTAFold, HADDOCK, SQL, and AWS.
+
+\item \textbf{Bioinformaticist}, \textbf{zoologist}, and \textbf{biologist} with a strong background in \textbf{parasitology}, \textbf{virology}, \textbf{biostatistics}, \textbf{data science}, and \textbf{computational biology}.
+
+\item Peer-reviewed publications on \textbf{comparative genomics}, and \textbf{zoonosis} of flaviviruses and coronaviruses, among other topics.
+
+\item 10+ years of experience in \textbf{molecular biology} labs, developing and optimizing \textbf{high-throughput sequencing} protocols (e.g., Illumina, PacBio, Hi-C, GWAS, and RNA-Seq).
+
+\item 3+ years of experience in \textbf{machine learning} (e.g., PyTorch, TensorFlow), \textbf{big data analyses}, \textbf{mathematical modeling}, \textbf{high-throughput data processing}, and \textbf{data mining algorithms} to solve practical problems in emerging infectious diseases research.
+
+\item Concepts used in my current and past projects include Bash, Python, R Flask, SQL, AWS, Git, Shiny, Tableu, Jupyter, AlphaFold2, RoseTTAFold, and HADDOCK.
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%
+%% POSITIONS HELD %%
+%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-1.5em}
+
+\section{Work Experience}
+    \cventry{2019--current}
+    	{Postdoctoral Fellow}
+    	{University of North Carolina at Charlotte}
+    	{Charlotte--NC}
+    	{USA}
+    	{}
+    \vspace{-1em}
+    \begin{itemize}[itemsep=-0.05in, labelindent=0in, leftmargin=1cm]\small
+	    \item[\textcolor{color1}{\textbullet}] I studied the origins, evolution, and zoonotic events of coronaviruses. To that end, I created the first programs for gene prediction and annotation of \textit{Orthocoronavirinae} (including SARS-COV-2) and \textit{Flaviviridae} (including Hepatites C, yellow fever, dengue, and Zika virus) and deployed the pipelines as a web application. I also employed big data analysis to categorize different variants of SARS-CoV-2 and applied deep learning techniques to produce highly accurate structure predictions of their proteins.
+	    \item[\textcolor{color1}{\textbullet}] I use artificial intelligence to predict how structural changes in the receptor-binding domain of the spike protein of different variants of SARS-CoV-2 may reduce antibody interaction without completely evading existing neutralizing antibodies (and therefore current vaccines).
+	    \item[\textcolor{color1}{\textbullet}] I performed comparative genomic analyses of highly regenerative echinoderms to developed new models for the study of tissue regeneration in humans.
+	\end{itemize}
+    \vspace{-0.5em}
+    \cventry{2018--2020}
+    	{Research Collaborator}
+    	{University of São Paulo}
+    	{São Paulo--SP}
+    	{Brazil}
+    	{}
+    \vspace{-1em}
+    \begin{itemize}[itemsep=-0.05in, labelindent=0in, leftmargin=1cm]\small
+	    \item[\textcolor{color1}{\textbullet}] I built and administered the first computer clusters at the Muzeum of Zoology of the University of São Paulo (MUZUSP), providing training and technology to bridge the gap between animal research and applied bioinformatics with potential biomedical significance.
+	    \item[\textcolor{color1}{\textbullet}] I participated in the planning, funding acquisition, and implementation of the first laboratory to sequence historical DNA (e.g., from degraded museum samples) at the Department of Zoology of the University of São Paulo (USP).
+	    \item[\textcolor{color1}{\textbullet}] I developed new genome skimming techniques to retrieve genomic data of non-model organisms (mainly parasites and mosquito vectors) when samples were small or degraded. I also created the necessary software to facilitate the analysis of organelle genomes, including new indices that check for the completeness of circular genomes or misalignments in other types of contigs and scaffolds.
+    \end{itemize}
+    \cventry{2018--2019}
+    	{Invited Lecturer}
+    	{University of São Paulo}
+    	{São Paulo--SP}
+    	{Brazil}
+    	{}
+    \vspace{-1em}
+    \begin{itemize}[itemsep=-0.05in, labelindent=0in, leftmargin=1cm]\small
+	    \item[\textcolor{color1}{\textbullet}] I created and taught the first graduate-level courses in computer programming and bioinformatics for biologists at USP's Graduate Program in Zoology, which is ranked first in animal research worldwide.
+	\end{itemize}
+    \vspace{-0.5em}
+    \cventry{Jul--Aug, 2017}
+    	{Invited Lecturer}
+    	{University of Magdalena}
+    	{Santa Marta D.T.C.H.}
+    	{Colombia}
+    	{}
+    \vspace{-1em}
+    \begin{itemize}[itemsep=-0.05in, labelindent=0in, leftmargin=1cm]\small
+	    \item[\textcolor{color1}{\textbullet}] I designed and taught the first graduate-level course in computational biology at the University of Magdalena. Classes focuses on the evolution and epidemiology of flaviviruses.
+	\end{itemize}
+
+% \cventry{2018--Current}{Science Teacher}{Kindy Escola Americana}{São Paulo--SP, Brazil}{}{Level: Years 6 to 9}
+
+% \cventry{2012--2013}{Associated Researcher}{Universidade de São Paulo \emph{(USP)}}{São Paulo--SP, Brazil}{}{Supervisor: Prof. Dr. Fernando Portella de Luna Marques\newline{}Main activities: DNA sequencing and analysis; development of bioinformatic tools for phylogenetic systematics; management of local computer cluster; tapeworm taxonomy}
+
+% \cventry{2011--2013}{Professor}{Instituto Brasileiro de Formação e Capacitação \emph{(IBFC)}}{Taboão da Serra--SP}{}{Discipline: Basic and Applied Informatics \newline{}Level: High School\newline{} Topics: Computer History; Microssoft Office; Email; Introduction to Cloud Computing}
+
+% \cventry{2011--2012}{Professor}{Oficina do Estudante}{São Paulo--SP, Brazil}{}{Disciplines: Calculus I; Analitical Geometry; Basic Physics; Basic Chemistry}
+
+% \cventry{Aug--Dec 2011}{Teacher Assistant}{Universidade de São Paulo \emph{(USP)}}{São Paulo--SP, Brazil}{}{Discipline: Diversity and Biogeography of the Neotropical Fauna\newline{}Supervisor: Prof. Ricardo Pinto da Rocha, PhD.\newline{}Scholarship: Programa de Apoio ao Ensino (PAE)}
+
+% \cventry{Mar--Jul 2011}{Teacher Assistant}{Universidade de São Paulo \emph{(USP)}}{São Paulo--SP, Brazil}{}{Discipline: Foundations of Systematics and Biogeography\newline{}Supervisor: Prof. Fernando Portella de Luna Marques, PhD.\newline{}Scholarship: Programa de Apoio ao Ensino (PAE)}
+
+% \cventry{Aug--Dec 2010}{Teacher Assistant}{Universidade Estadual ``Júlio de Mesquita Filho'' \emph{(UNESP)}}{São Vicente--SP}{}{Discipline: Invertebrate Zoology II\newline{}Supervisor: Prof. Tânia Márcia Costa, PhD.}
+
+% \cventry{2006--2009}{Laboratory Assistant}{Universidade Estadual Paulista ``Júlio de Mesquita Filho'' \emph{(UNESP)}}{São Vicente--SP}{}{Supervisor: Prof. Selma Dzimidas Rodrigues, PhD.\newline{}Main activities: statistical analysis of biologiacl data; computational support}
+
+% \cventry{2006--2009}{Associated Researcher}{Intituto de Pesquisas A Tribuna \emph{(IPAT)}}{Santos--SP}{}{Main activities: bibliographic revision of enviromental and social impact of the Port of Santos}
+
+% \cventry{2006--2008}{Coodinator}{NGO Cursinho Educação para Todos}{São Vicente--SP}{}{Disciplines: Arithmetics; Physics; Chemistry\newline{}Level: High School}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% FORMAL EDUCATION %%
+%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-1.5em}
+
+\section{Education}
+
+	\cventry{2013--2018}
+		{Ph.D. in Bioinformatics}
+		{University of São Paulo (USP)}
+		{São Paulo--SP}
+		{Brazil}
+		{Research focus: high-performance computing, next-gerenation sequencing, and comparative genomics}
+
+	\cventry{2010--2012}
+		{M.Sc. in Zoology}
+		{University of São Paulo (USP)}
+		{São Paulo--SP}
+		{Brazil}
+		{Research focus: invertebrate zoology, host-parasite coevolution, molecular biology, and phylogenetics}
+
+	\cventry{2006--2009}
+		{B.Sc. in Biological Sciences}
+		{São Paulo State University (UNESP)}
+		{São Vicente--SP}
+		{Brazil}
+		{Qualification: Marine Biology}
+
+\restoregeometry
+
+\clearpage
+
+%%%%%%%%%%%%
+%% AWARDS %%
+%%%%%%%%%%%%
+
+\section{Honors \& Awards}
+
+\cventry{2016}
+	{Grand Stars in Human Health}
+	{Grand Challenges Canada}
+	{Canada}
+	{}
+	{\textbullet~\$461,250 for the development of an ``Larvicide Automatic Dispenser'' (LAD) to be used in the population control of mosquito vectors of flaviriruses including dengue and Zika virus}
+
+\cventry{---}
+	{Most Implementable Solution, sponsored by GE Foundation}
+	{Zika Innovation Hack-a-thon}
+	{Boston--MA}
+	{USA}
+	{\textbullet~Proposal of a ``Larvicide Automatic Dispenser'' (LAD) device to be used in the population control of mosquito vectors of flaviriruses including dengue and Zika virus}
+
+\cventry{2016--2017}
+	{Research Internship Abroad}
+	{São Paulo Research Foundation (FAPESP)}
+	{São Paulo--SP}
+	{Brazil}
+	{
+		\textbullet~Project: ``Whole-genome sequence of the Eastern spadefoot toad, \textit{Scaphiopus holbrookii} (Amphibia: Anura: Scaphiopodidade) and of the Maldonado redbelly toad, \textit{Melanophryniscus moreirae} (Amphibia: Anura: Bufonidae)''\\
+		\textbullet~File number: 2015/18654-2
+	}
+
+\cventry{2013}
+	{The Willi Hennig Award}
+	{The Willi Hennig Society}
+	{Rostock}
+	{Germany}
+	{}
+
+\cventry{---}
+	{Kurt Milton Pickett Award}
+	{The Willi Hennig Society}
+	{Rostock}
+	{Germany}
+	{}
+
+\cventry{2013--2018}
+	{Doctorate Scholarship Award}
+	{São Paulo Research Foundation (FAPESP)}
+	{São Paulo--SP}
+	{Brazil}
+	{
+		\textbullet~File number: 2013/05958-8
+	}
+
+\cventry{2010--2012}
+	{Master Scholarship Award}
+	{São Paulo Research Foundation (FAPESP)}
+	{São Paulo--SP}
+	{Brazil}
+	{
+		\textbullet~File number: 2009/13561-5
+	}
+
+\cventry{2009}
+	{Scientific Initiation Award}
+	{São Paulo Research Foundation (FAPESP)}
+	{São Paulo--SP}
+	{Brazil}
+	{
+		\textbullet~File number: 2009/00886-3
+	}
+
+%%%%%%%%%%%%%%%%%%
+%% PUBLICATIONS %%
+%%%%%%%%%%%%%%%%%%
+
+\section{Complete List of Publications}
+
+My Google Scholar's URL is \href{https://scholar.google.com/citations?user=RSChnSQAAAAJ\&hl=en}{https://scholar.google.com/citations?user=RSChnSQAAAAJ\&hl=en}.
+
+% \subsection{Peer Reviewed Publications}
+
+%%%%%%%%%%
+%% 2022 %%
+%%%%%%%%%%
+
+\subsection{2022}
+
+    {\setlength{\parskip}{.5em}\renewcommand{\baselinestretch}{2.0}\begin{hangparas}{.25in}{1}
+
+    	Mashanov V., Whaley L., Davis K., Heinzeller T., Machado D.J., Reid R.W., Kofsky J., and Janies D.A. (2022) A subterminal growth zone at arm tip likely underlies life-long indeterminate growth in brittle stars. \textit{Frontiers in Zoology}, \textbf{19}: 15. DOI: \href{https://doi.org/10.1186/s12983-022-00461-0}{10.1186/s12983-022-00461-0}.
+
+    	Ford C.T., Machado D.J., and Janies D.A. (2022) Predictions of the SARS-CoV-2 Omicron variant (B.1.1.529) spike protein receptor-binding domain structure and neutralizing antibody interactions. \textit{Frontiers in Virology}, \textbf{2}: 830202. DOI: \href{https://doi.org/10.3389/fviro.2022.830202}{10.3389/fviro.2022.830202}.
+
+    \end{hangparas}}
+
+%%%%%%%%%%
+%% 2021 %%
+%%%%%%%%%%
+
+\subsection{2021}
+
+    {\setlength{\parskip}{.5em}\renewcommand{\baselinestretch}{2.0}\begin{hangparas}{.25in}{1}
+
+		Machado D.J., White III R.A., Kofsky J., and Janies D.A. (2021) Fundamentals of genomic epidemiology, lessons learned from the coronavirus disease 2019 (COVID-19) pandemic, and new directions. \textit{Antimicrobial Stewardship \& Healthcare Epidemiology}, \textbf{1}: E60. DOI: \href{https://doi.org/10.1017/ash.2021.222}{10.1017/ash.2021.222}.
+
+		Machado D.J., Scott R., Guirales S., and Janies D.A. (2021) Fundamental evolution of all \emph{Orthocoronavirinae} including three deadly lineages descendent from Chiroptera‐hosted coronaviruses: SARS‐CoV, MERS‐CoV and SARS‐CoV‐2. \emph{Cladistics}, \textbf{37(5)}: 461-488. DOI: \href{https://doi.org/10.1111/cla.12454}{10.1111/cla.12454}.
+
+		Machado D.J., Marques F.P.L., Jiménez-Ferbans L., and Grant T. (2021) An empirical test of the relationship between the bootstrap and likelihood ratio support in maximum likelihood phylogenetic analysis. \textit{Cladistics} (early view). DOI: \href{https://doi.org/10.1111/cla.12496}{10.1111/cla.12496}.
+
+		Machado D.J., Castroviejo-Fisher S., and Grant T. (2021) Evidence of absence treated as absence of evidence: the effects of variation in the number and distribution of gaps treated as missing data on the results of standard maximum likelihood analysis. \emph{Molecular Phylogenetics and Evolution}, \textbf{154}: 106966. DOI: \href{https://doi.org/10.1016/j.ympev.2020.106966}{10.1016/j.ympev.2020.106966}.
+
+        Orrico V.G.D., Grant T., Faivovich J., Rivera‐Correa M., Rada, M.A., Lyra M.L., Cassini C.S., Valdujo P.H., Schargel W.E., Machado D.J., Wheeler W.C., Barrio‐Amorós C., Loebmann D., Moravec J., Zina J., Solé M., Sturaro M.J., Peloso P.L.V., Suarez P., and Haddad C.F.B. (2021). The phylogeny of Dendropsophini (Anura: Hylidae: Hylinae). \emph{Cladistics}, \textbf{37(1)}: 73–105. DOI: \href{https://doi.org/10.1111/cla.12429}{10.1111/cla.12429}.
+
+        Trevisan B., Machado D.J., Lahr D.J.G., Marques F.P.L.M. (2021) Comparative characterization of mitogenomes from five orders of cestodes (Eucestoda: Tapeworms). \textit{Frontiers in Genetics}, \textbf{12}: 788871. DOI: \href{ https://doi.org/10.3389/fgene.2021.788871}{10.3389/fgene.2021.788871}.
+
+	\end{hangparas}}
+
+%%%%%%%%%%
+%% 2020 %%
+%%%%%%%%%%
+
+\subsection{2020}
+
+    {\setlength{\parskip}{.5em}\renewcommand{\baselinestretch}{2.0}\begin{hangparas}{.25in}{1}
+
+        Machado D.J., Schneider A.D, and Janies D. (2020) Enhanced genome annotation strategy provides novel insights on the phylogeny of \emph{Flaviviridae}. \emph{Viruses},\textbf{12(8)}: 892. DOI: \href{https://www.mdpi.com/1999-4915/12/8/892}{10.3390/v12080892}.
+
+	    Mashanov V., Akiona J., Khoury M., Ferrier J., Reid R., Machado D.J., … Janies D. (2020) Active Notch signaling is required for arm regeneration in a brittle star. \emph{PLoS ONE}, \textbf{15(5)}: e0232981. DOI: \href{https://doi.org/10.1371/journal.pone.0232981}{10.1371/journal.pone.0232981}
+
+	    Lin J.-P., Tsai M., Kroh A., Trautman A., Machado D.J., Chang L., … Janies D. (2020) The first complete mitochondrial genome of the sand dollar \emph{Sinaechinocyamus mai} (Echinoidea: Clypeasteroida). \emph{Genomics}, \textbf{112(2)}: 1686-1693. DOI: \href{https://doi.org/10.1016/j.ygeno.2019.10.007}{10.1016/j.ygeno.2019.10.007}.
+
+	\end{hangparas}}
+
+%%%%%%%%%%
+%% 2019 %%
+%%%%%%%%%%
+
+\subsection{2019}
+
+    {\setlength{\parskip}{.5em}\renewcommand{\baselinestretch}{2.0}\begin{hangparas}{.25in}{1}
+		Trevisan B., Alcantara D.M.C., Machado D.J., Marques F.P.L. \& Lahr D.J.G. (2019) Genome Skimming is a low-cost and robust strategy to assemble complete mitochondrial genomes from ethanol preserved specimens in biodiversity studies. \emph{PeerJ}, \textbf{7}: e7543. DOI: \href{https://doi.org/10.7717/peerj.7543}{10.7717/peerj.7543}.
+	\end{hangparas}}
+
+%%%%%%%%%%
+%% 2018 %%
+%%%%%%%%%%
+
+\subsection{2018}
+
+    {\setlength{\parskip}{.5em}\renewcommand{\baselinestretch}{2.0}\begin{hangparas}{.25in}{1}
+		Machado D.J., Janies D., Brouwer C. \& Grant T. (2018) A new strategy to infer circularity applied to four new complete frog mitogenomes. \emph{Ecology and Evolution}, \textbf{8(8)}: 4011-4018. DOI: \href{http://doi.wiley.com/10.1002/ece3.3918}{10.1002/ece3.3918}.
+	\end{hangparas}}
+
+%%%%%%%%%%
+%% 2017 %%
+%%%%%%%%%%
+
+\subsection{2017}
+
+    {\setlength{\parskip}{.5em}\renewcommand{\baselinestretch}{2.0}\begin{hangparas}{.25in}{1}
+		Grant T., Rada M.A., Anganoy-Criollo M., Batista A., Dias P.H., Jeckel A.M., Machado D.J. \& Rueda-Almonacid J.V. (2017) Phylogenetic Systematics of Dart-Poison Frogs and Their Relatives Revisited (Anura: Dendrobatoidea). \emph{South American Journal of Herpetology} \textbf{12(s1)}: S1-S90. DOI: \href{http://www.bioone.org/doi/10.2994/SAJH-D-17-00017.1}{10.2994/SAJH-D-17-00017.1}.
+	\end{hangparas}}
+
+\clearpage
+
+%%%%%%%%%%
+%% 2016 %%
+%%%%%%%%%%
+
+\subsection{2016}
+
+    {\setlength{\parskip}{.5em}\renewcommand{\baselinestretch}{2.0}\begin{hangparas}{.25in}{1}
+		Machado D.J., Lyra M.L. \& Grant, T. (2016) Mitogenome assembly from genomic multiplex libraries: Comparison of strategies and novel mitogenomes for five species of frogs. \emph{Molecular Ecology Resources}, \textbf{16(3)}: DOI: 686--693.~\href{https://doi.org/10.1111/1755-0998.12492}{10.1111/1755-0998.12492}.
+	\end{hangparas}}
+
+%%%%%%%%%%
+%% 2015 %%
+%%%%%%%%%%
+
+\subsection{2015}
+
+    {\setlength{\parskip}{.5em}\renewcommand{\baselinestretch}{2.0}\begin{hangparas}{.25in}{1}
+		Machado D.J. (2015) YBYRÁ facilitates comparison of large phylogenetic trees. \emph{BMC Bioinformatics}, \textbf{16(1)}: 204. DOI: \href{https://doi.org/10.1186/s12859-015-0642-9}{10.1186/s12859-015-0642-9}.
+	\end{hangparas}}
+
+%%%%%%%%%%
+%% 2012 %%
+%%%%%%%%%%
+
+\subsection{2012}
+
+    {\setlength{\parskip}{.5em}\renewcommand{\baselinestretch}{2.0}\begin{hangparas}{.25in}{1}
+		Machado D.J. \& Marques F.P.L. (2012) The forgotten origin of~\emph{Acanthobothrium}~Blanchard, 1848 (Tetraphyllidea: Onchobothriidae). \emph{Zootaxa} \textbf{3505}: 86--88. ISSN: \href{http://www.mapress.com/zootaxa/2012/f/z03505p088f.pdf}{11755326}.
+	\end{hangparas}}
+
+%%%%%%%%%%%%%%
+%% In press %%
+%%%%%%%%%%%%%%
+
+% \subsection{In Press}
+% 	{\setlength{\parskip}{.5em}\renewcommand{\baselinestretch}{2.0}\begin{hangparas}{.25in}{1}
 %
-\input{tex/01_preamble.tex} % Revised on July 24, 2020
-\input{tex/02_education.tex} % Revised on July 24, 2020
-\input{tex/03_positions.tex} % Revised on July 24, 2020
-\input{tex/04_awards.tex} % Revised on July 24, 2020
-\input{tex/05_publications.tex} % Revised on July 24, 2020
-\input{tex/06_funding.tex} % Revised on July 24, 2020
-\input{tex/07_events.tex} % Revised on July 24, 2020
-\input{tex/08_teach.tex} % Revised on July 24, 2020
-\input{tex/10_short.tex} % Revised on July 24, 2020
-\input{tex/11_reviews.tex} % Revised on July 24, 2020
-\input{tex/12_skills.tex} % Revised on July 24, 2020
-% \input{tex/13_references.tex} % Revised on July 24, 2020
-%
+% 	\end{hangparas}}
+
+%%%%%%%%%%%%%%%
+%% Preprints %%
+%%%%%%%%%%%%%%%
+
+\subsection{Preprints}
+
+	{
+		\setlength{\parskip}{.5em}\renewcommand{\baselinestretch}{2.0}
+		\begin{hangparas}{.25in}{1}
+
+		Ford C.T., Scott R.,  Machado D.J, and  Janies D.A. (2021) Sequencing data of North American SARS-CoV-2 isolates shows widespread complex variants. \textit{medRxiv}. DOI: \href{https://doi.org/10.1101/2021.01.27.21250648}{2021.01.27.21250648}.
+
+		Karthigeyan K.P., Flanigan C., Machado D.J., Kiziltas A.A., Janies D.A., Chen J., Cooke D., Lee M.V., Saif L.J., Henegar S., Jahnes J., Mielewski D.F., an dKwiek J.J. (2021) Heat efficiently inactivates coronaviruses inside vehicles. \textit{bioRxiv}. DOI: \href{https://doi.org/10.1101/2021.09.08.459486}{10.1101/2021.09.08.459486}
+
+		\end{hangparas}
+	}
+
+%%%%%%%%%%%%%
+%% FUNDING %%
+%%%%%%%%%%%%%
+
+\section{Grants Funded}
+
+\vspace{.5em}
+	\subsection{\textsc{Author and Beneficiary}}
+\vspace{.5em}
+
+\cventry{2016--2017}
+{Research Internship Abroad}
+{São Paulo Research Foundation (FAPESP)}
+{file no. 2015/18654-2}
+{US\$ 26,080.00}{}
+
+\cventry{2013--2018}
+{Funding of Doctorate Research Project}
+{São Paulo Research Foundation (FAPESP)}
+{file no. 2013/05958-8}
+{US\$ 84,295.00}{}
+
+\cventry{2010--2012}
+{Funding of Master's Research Project}
+{São Paulo Research Foundation (FAPESP)}
+{file no. 2009/13561-5}
+{US\$ 19,101.00}{}
+
+\cventry{May--Dec., 2009}
+{Funding for Scientific Initiation}
+{São Paulo Research Foundation (FAPESP)}
+{file no. 2009/00886-3}
+{US\$ 1,477.00}{}
+
+\vspace{.5em}
+	\subsection{\textsc{Collaborations}}
+\vspace{.5em}
+
+\cventry{2019--2022}
+{Young Researchers (2) Program}
+{São Paulo Research Foundation (FAPESP)}
+{file no. 2018/15425-0}
+{US\$ 1,221,990.00}{}
+
+\cventry{2018--2021}
+{R15 AREA Project}
+{National Institutes of Health (NIH)}
+{file no. 1R15GM128066-01}
+{}{}
+
+\cventry{2018--2020}
+{Regular Research Project from Continuous Funding Stream}
+{São Paulo Research Foundation (FAPESP)}
+{file no. 2018/03534-0}
+{US\$ 41,296.00}{}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% SCIENTIFIC EVENTS %%
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%
+%% ORGANIZATION %%
+%%%%%%%%%%%%%%%%%%
+
+\section{Event Organization}
+
+\cventry{Jul. 7--28, 2022}
+	{III Virtual Meeting of Systematics, Biogeography, and Evolution (SBE)}
+	{Online}
+	{Worldwide}
+	{}
+	{
+		\textbullet~Description: The SBE meeting 2022 will happen on every Thursday of July, 2022, from day 7 to day 28, on UTC-4. Each day will be composed of two symposia hosted over Zoom and one virtual poster session in the SBE meeting 2022's Discord server. The SBE meetings are scientific events organized by mostly young Latinx researchers under a zero budge, zero profit, and zero cost strategy.\\
+		\textbullet~Event's homepage: \url{https://www.sbemeeting.weebly.com}
+	}
+
+\cventry{Jun. 19--23, 2021}
+	{II Virtual Meeting of Systematics, Biogeography, and Evolution (SBE): The Research of Biodiversity and the Diversity of Researchers}
+	{Online}
+	{Worldwide}
+	{}
+	{
+		\textbullet~Description: The SBE meeting 2021's primary purpose was to reach people who usually have economic restrictions to attend most of the scientific meetings on different areas within evolutionary biology. In its second edition, the event had 10 symposia, 1 workshop, and over 2,000 attendees from hundreds of institutions worldwide.\\
+		\textbullet~Event's homepage: \url{https://www.sbemeeting.com}
+	}
+
+\cventry{Jul. 28--30, 2020}
+	{I Virtual Meeting of Systematics, Biogeography, and Evolution (SBE): A Joint Effort in the Coronavirtual Era}
+	{Online}
+	{Worldwide}
+	{}
+	{
+		\textbullet~Description: The SBE meeting is a space for socialization and scientific dialogue that promotes the advancement of the discipline and encourages inclusive participation based on gender equality in all conferences and symposia. In its first edition, it had over 1,200 scientists enrolled from 38 countries\\
+		\textbullet~Event's homepage: \url{https://sbemeeting.weebly.com}
+	}
+
+%%%%%%%%%%%
+%% TALKS %%
+%%%%%%%%%%%
+
+\section{Oral Presentations}
+
+\cventry{2022}
+	{VI Symposium of Zoological Systematics}
+	{Online}
+	{Worldwide}
+	{}
+	{
+		\textbullet~Title: The role of phylogeneticists in the execution of the One Health approach.\\
+		\textbullet~Authors: Machado D.J., Antunes, E.P., Omura, G.S.Y., Yohe L.\\
+		\textbullet~Organization: Graduate Program in Zoology, Federal University of Minas Gerais\\
+		\textbullet~Event's homepage: \url{https://szsufmg.wixsite.com/vi-szs-ufmg}
+	}
+
+\cventry{---}
+	{XV Academic Meeting of Computational Modeling}
+	{Online}
+	{Worldwide}
+	{}
+	{
+		\textbullet~Title: Análises filogenômica de coronavírus: uma discussão metodológica.\\
+		\textbullet~Authors: Machado D.J.\\
+		\textbullet~Organization: Summer Program 2022, National Laboratory of Scientific Computing (LNCC)\\
+	}
+
+\cventry{2021}
+	{Special Symposium of UNC Charlotte's Bioinformatics Research Center}
+	{Online}
+	{Worldwide}
+	{}
+	{
+		\textbullet~Title: The origins of human coronaviruses.\\
+		\textbullet~Authors: Janies D.A., Machado D.J., Scott R. \& Guirales S.\\
+		\textbullet~Organization: II Virtual Meeting of Systematics, Biogeography and Evolution: A Joint Effort in the Coronavirtual Era\\
+		\textbullet~Event's homepage: \url{https:/www.sbemeeting.com}
+	}
+
+\cventry{---}
+	{Seminar Series}
+	{Santa Marta, Colombia}
+	{Universidad del Magdalena}
+	{}
+	{
+		\textbullet~Title: Epidemiología genómica y lecciones aprendidas de la pandemia de COVID-19.\\
+		\textbullet~Authors: Machado D.J.\\
+		\textbullet~Organization: Universidade del Magdalena\\
+	}
+
+\cventry{---}
+	{CARLA 2021}
+	{Online}
+	{Worldwide}
+	{}
+	{
+		\textbullet~Title: The HPC bottlenecks in the genomic surveillance of SARS-CoV-2.\\
+		\textbullet~Authors: Machado D.J.\\
+		\textbullet~Organization: Latin American High Performance Computing Conference\\
+		\textbullet~Website: \url{carla2021.org}\\
+	}
+
+\cventry{---}
+	{Projetos COVID}
+	{Online}
+	{Worldwide}
+	{}
+	{
+		\textbullet~Title: The origins of human coronaviruses.\\
+		\textbullet~Authors: Machado D.J.\\
+		\textbullet~Organization: Hospital Israelita Albert Einstein\\
+	}
+
+\cventry{2020}
+	{Virology in the SARS-CoV-2 Era}
+	{Online}
+	{Worldwide}
+	{}
+	{
+		\textbullet~Title: Phylogenomics of \textit{Orthocoronavirinae}: evolutionary relationships between coronaviruses and their hosts.\\
+		\textbullet~Authors: Machado D.J. \& Janies D.\\
+		\textbullet~Organization: I Virtual Meeting of Systematics, Biogeography and Evolution: A Joint Effort in the Coronavirtual Era\\
+		\textbullet~Event's homepage: \url{https://sbemeeting.weebly.com/}
+	}
+
+\cventry{---}
+	{Phylopizza}
+	{Washington, D.C.}
+	{Smithsonian Institution}
+	{}
+	{
+		\textbullet~Title: What do poison dart frogs have to do with COVID-19?\\
+		\textbullet~Authors: Machado D.J.\\
+		\textbullet~Organization: Laboratory of Data Sciences, Smithsonian Institution\\
+	}
+
+\cventry{---}
+	{UNC Charlotte Continuing Education Webinar Series}
+	{Charlotte--NC}
+	{USA}
+	{}
+	{
+		\textbullet~Title: COVID-19: Understanding the Science Behind the Pandemic\\
+		\textbullet~Authors: Janies D. \& Machado D.J.\\
+		\textbullet~Organization: UNC Charlotte Continuing Education and UNC Charlotte College of Computing and Informatics\\
+		\textbullet~Recording available at \url{https://youtu.be/VmdNGyFRu3c}
+	}
+
+\cventry{2019}
+	{XXXVIII Annual Meeting of the Willi Hennig Society}
+	{Berkeley--CA}
+	{USA}
+	{}
+	{
+		\textbullet~Title: Facing long-branch anxiety and outgroup prejudice in the phylogenomic analysis of \emph{Flaviviridae}\\
+		\textbullet~Authors: Machado D.J., Schneider A. de. B. \& Janies D.\\
+		\textbullet~Support: Department of Bioinformatics and Genomics,  UNC Charlotte
+	}
+
+\vspace{.5em}
+
+\cventry{---}
+	{XXXVIII Annual Meeting of the Willi Hennig Society}
+	{Berkeley--CA}
+	{USA}
+	{}
+	{
+		\textbullet~Title: Eclecticism in cladistics: convergence among opposing optimality criteria may be a hoax\\
+		\textbullet~Authors: Jiménez-Ferbans L., Machado D.J. \& de Freitas G.M.I.\\ \textbullet~Support: Department of Bioinformatics and Genomics,  UNC Charlotte
+	}
+
+\vspace{.5em}
+
+\cventry{---}
+	{The 94th Annual Meeting of the American Society of Parasitologists}
+	{Rochester--MN}
+	{USA}
+	{}
+	{
+		\textbullet~Title:  New dedicated pipeline to annotate the cestode mitogenome\\
+		\textbullet~Authors: Trevisan B., Machado D.J., Marques F.P. de L.\\ \textbullet~Support: Department of Bioinformatics and Genomics,  UNC Charlotte
+	}
+
+\vspace{.5em}
+
+\cventry{2017}
+	{5th International Quest for Orthologs Meeting}
+	{Los Angeles--CA}
+	{USA}
+	{}
+	{
+		\textbullet~Title: Flavivirus phylogeny revisited: in search of the orthologs\\
+		\textbullet~Autores: Schneider A. de. B., Machado D.J., Lambodhar D. \& Janies D.\\
+		\textbullet~Support: FAPESP \& Department of Bioinformatics and Genomics,  UNC Charlotte
+	}
+
+\vspace{.5em}
+
+\cventry{2016}
+	{35th Annual Meeting of the Willi Hennig Society and XII Reunión Argentina de Cladística y Biogeografia}
+	{Buenos Aires}
+	{Argentina}
+	{}
+	{
+		\textbullet~Title: Evidence of absence treated as absence of evidence: the effects of gaps in standart maximum likelihood analysis\\
+		\textbullet~Authors: Machado D.J., Castroviejo-Fisher S. \& Grant T.\\
+		\textbullet~Support: FAPESP and UNC Charlotte
+	}
+
+\vspace{.5em}
+
+\cventry{---}
+	{35th Annual Meeting of the Willi Hennig Society and XII Reunión Argentina de Cladística y Biogeografia}
+	{Buenos Aires}
+	{Argentina}
+	{}
+	{
+		\textbullet~Title: direct measures of support for maximum likelihood\\
+		\textbullet~Authors: Machado D.J., Marques F.P. de L. \& Grant T.\\
+		\textbullet~Support: FAPESP and UNC Charlotte
+	}
+
+\vspace{.5em}
+
+\cventry{2014}
+	{X Congreso Latinoamericano de Zoologia}
+	{Cartajena das Indias}
+	{Colombia}
+	{}
+	{
+		\textbullet~Title: Reconstructing mitochondrial genomes for five species of amphibians directly from genomic next-generation sequencing reads\\
+		\textbullet~Authors: Machado D.J., Lyra M.L. \& Grant T.\\
+		\textbullet~Support: FAPESP
+	}
+
+\vspace{.5em}
+
+\cventry{---}
+	{X Congreso Latinoamericano de Zoologia}
+	{Cartajena das Indias}
+	{Colombia}
+	{}
+	{
+		\textbullet~Title: Phylogenetic analysis of transformation series composed of ordered sequences\\
+		\textbullet~Authors: Dias P.H.S. \& Machado D.J.\\
+		\textbullet~Support: FAPESP
+	}
+
+\vspace{.5em}
+
+\cventry{---}
+	{``Curso de Verão em Bioinformática''}
+	{University of São Paulo}
+	{São Paulo--SP}
+	{Brazil}
+	{
+		\textbullet~Event organizer and panelist
+	}
+
+\vspace{.5em}
+
+\cventry{2013}
+	{XXXII Willi Hennig Meeting}
+	{University of Rostock}
+	{Rostock}
+	{Germany}
+	{
+		\textbullet~Title: On the use of iterative pass as a refinement strategy\\
+		\textbullet~Authors: Machado D.J. \& Marques F.P. de L.\\
+		\textbullet~Support: FAPESP
+	}
+
+\vspace{.5em}
+
+\cventry{2011}
+	{XXX Willi Hennig Meeting}
+	{Universidade Estadual Paulista ``Júlio de Mesquita Filho''}
+	{São José do Rio Preto--SP}
+	{Brazil}
+	{
+		\textbullet~Title: Phylogenetic position of phyllobothriids (Eucestoda: Tetraphyllidea: Phyllobothriidea) parasites of Neotropical freshwater stingrays (Chondrichthyies: Myliobatoidei: Potamotrygonidae) based on direct optimization of nucleotide sequences\\
+		\textbullet~Authors: Machado D.J. \& Marques F.P. de L.\\
+		\textbullet~Support: FAPESP
+	}
+
+\vspace{.5em}
+
+\cventry{---}
+	{7th International Workshop on Cestode Systematics}
+	{University of Kansas}
+	{Lawrence--KS}
+	{USA}
+	{
+		\textbullet~Title: Defining species boundaries using integrated taxonomy for freshwater tetraphyllideans: How to recognize and deal with great morphological variation?\\
+		\textbullet~Authors: Marques F.P. de L., Reyda F.B., Prado P.I., Bueno V.M., Machado D.J. \& Luchetti N.M.\\
+		\textbullet~Support: FAPESP
+	}
+
+\clearpage
+
+%%%%%%%%%%%%%
+%% POSTERS %%
+%%%%%%%%%%%%%
+
+\section{Poster Presentations}
+
+\cventry{2020}
+	{ASBMB Annual Meeting}
+	{}
+	{USA}
+	{}
+	{
+		\textbullet~FLAVi‐Web: A Web Annotator for Viral Genomes of Flaviviridae with a Revised Phylogeny of the Family\\
+		\textbullet~Authors: Guirales S.,  Machado D.J.,  Schneider A.de B. \&  Janies D.\\
+		\textbullet~Support: Department of Bioinformatics and Genomics,  UNC Charlotte\\
+		\textbullet~Publication: The Federation of American Societies for Experimental Biology (FASEB) Journal\\
+		\textbullet~DOI: \href{https://doi.org/10.1096/fasebj.2020.34.s1.09730}{10.1096/fasebj.2020.34.s1.09730}
+	}
+
+\vspace{.5em}
+
+\cventry{2019}
+	{XXXVIII Annual Meeting of the Willi Hennig Society}
+	{Berkeley--CA}
+	{USA}
+	{}
+	{
+		\textbullet~Enhanced mitogenome annotation and phylogenetic analysis of Cestode\\
+		\textbullet~Authors: de Freitas G.M.I. \& Machado D.J.\\
+		\textbullet~Support: Department of Bioinformatics and Genomics,  UNC Charlotte
+	}
+
+\vspace{.5em}
+
+\cventry{2018}
+	{Virus Genomics and Evolution}
+	{Cambridge}
+	{UK}
+	{}
+	{
+		\textbullet~Stopping to compare apples and oranges: a homology-based phylogeny of Flaviviridae \\
+		\textbullet~Authors: Schneider A. de. B. \& Machado D.J.
+}
+
+\vspace{.5em}
+
+\cventry{2013}
+	{XXXII Willi Hennig Meeting}
+	{University of Rostock}
+	{Rostock}
+	{Germany}
+	{
+		\textbullet~YBYRÁ - a fast and resourceful tool for examining clade prevalences in large sets of trees\\
+		\textbullet~Authors: Machado D.J. \& Marques F.P. de L.\\
+		\textbullet~Support: FAPESP
+}
+
+\section{Teaching Positions}
+
+\vspace{.5em}
+	\subsection{\textsc{Graduate School}}
+\vspace{.5em}
+
+\cventry{2021}
+	{Workshop Instructor}
+	{Penn State University}
+	{``Don't panic: a survival guide to RNA-Seq''}
+	{16 hours, single event}
+	{
+		\textbullet~Theory and practice on RNA-Seq and gene expression analysis for biomedical applications .
+	}
+
+\cventry{2019 -- current}
+	{Invited Lecturer}
+	{University of São Paulo}
+	{``Introduction to programming for biologists''}
+	{60 hours, yearly}
+	{
+		\textbullet~Taught lecture and lab to 20 graduate students and postdocs\\
+		\textbullet~Evaluated highly by students for introducing original course material that teaches Bash, Python, and R using examples that integrate different fields, from phylogenetics to systems biology
+	}
+
+\vspace{.5em}
+
+\cventry{2018 -- current}
+	{Invited Lecturer}
+	{University of São Paulo}
+	{``Introduction to bioinformatics: a theory-practice course with examples from the phylogenomics of \emph{Flavivirus}''}
+	{60 hours, yearly}
+	{
+		\textbullet~Taught lecture and lab to 40 graduate students and postdocs\\
+		\textbullet~Developed bioinformatics lab exercises based on open-source tools\\
+		\textbullet~Evaluated highly by students for promoting critical thinking\\
+		\textbullet~Introduced hack-a-thon events that helped solving local problems\\
+		\textbullet~Promotes learning interdisciplinary concepts and practicing bioinformatics following the step-by-step protocols of a real and original research paper
+	}
+
+\vspace{.5em}
+
+\cventry{Jul -- Aug 2017}
+	{Invited Lecturer}
+	{University of Magdalena}{Introduction to bioinformatics with practical examples from flavivirus genomics}
+	{40 hours}
+	{
+		\textbullet~Taught lecture and lab to 20 students, including grad students and postdocs\\
+		\textbullet~Raised resources to expand the local library and computational equipment
+	}
+
+
+\clearpage
+
+	\subsection{\textsc{College Level}}
+\vspace{.5em}
+
+\cventry{Aug -- Dec 2013}
+	{Teacher Assistant}
+	{University of São Paulo}
+	{Department of Zoology}
+	{}
+	{
+		\textbullet~Teaching: Vertebrate Zoology\\
+		\textbullet~Supervissor: Professor Taran Grant
+	}
+
+\vspace{.5em}
+
+\cventry{Aug -- Dec 2011}
+	{Teacher Assistant}
+	{University of São Paulo}
+	{Department of Zoology}
+	{}
+	{\textbullet~Teaching: Diversity and Biogeography of the Neotropical Fauna\\\textbullet~Supervisor: Professor Ricardo Pinto da Rocha
+	}
+
+\vspace{.5em}
+
+\cventry{Mar -- Jul 2011}
+	{Teacher Assistant}
+	{Universidade de São Paulo}
+	{Department of Zoology}
+	{}
+	{\textbullet~Teaching: Foundations of Systematics and Biogeography\\
+		\textbullet~Supervisor: Professor Fernando Portella de Luna Marques
+	}
+
+\vspace{.5em}
+
+\cventry{Aug -- Dec 2010}
+	{Teacher Assistant}
+	{São Paulo State University}{Marine Biology}
+	{}
+	{
+		\textbullet~Teaching: Invertebrate Zoology II\\
+		\textbullet~Supervisor: Professor Tânia Márcia Costa
+	}
+
+\vspace{.5em}
+	\subsection{\textsc{K-12}}
+\vspace{.5em}
+
+\cventry{2018 -- 2019}
+	{Science Teacher}
+	{Kindy Escola Americana}
+	{São Paulo--SP}
+	{Brazil}
+	{
+		\textbullet~Responsible for the science courses\\
+		\textbullet~Developed and led hands-on activities\\
+		\textbullet~Practice strategies to promote gender and social equity
+	}
+
+\vspace{.5em}
+
+\cventry{2011 -- 2013}
+	{Informatics Instructor}
+	{Instituto Brasileiro de Formação e Capacitação \emph{(IBFC)}}
+	{Taboão da Serra--SP}
+	{Brazil}
+	{
+		\textbullet~Taught lecture and lab  on computer history, Microssoft application, Email, and Cloud Computing\\
+		\textbullet~Non-governmental agency aiming to offer opportunities in low-income communities
+	}
+
+\vspace{.5em}
+
+\cventry{2011 -- 2012}
+	{Coordinator of Exact Sciences}
+	{Oficina do Estudante}
+	{São Paulo--SP, Brazil}
+	{}
+	{
+		\textbullet~Taugh calculus, analytical geometry, basic physics, and basic chemistry\\
+		\textbullet~Classes aimed to increase the chances of students from low-income families get access to a college education
+	}
+
+\vspace{.5em}
+\subsection{\textsc{Mentoring}}
+\vspace{.5em}
+
+\cventry{2021--2022}
+{College of Computing and Informatics}
+{University of North Carolina at Charlotte}
+{Charlotte--NC}
+{USA}
+{
+	\textbullet~Level: Doctorate\\
+	\textbullet~No. of students: 2\\
+	\textbullet~Project 1: ``Evolution of antimicrobial resistance in \textit{Escherichia coli}''\\
+	\textbullet~Project 2: ``Improving genomic resources for highly regenerative echinoderms''\\
+	\textbullet~Primary advisor: Professor Daniel Janies\\
+}
+
+\cventry{2021--2022}
+{College of Computing and Informatics}
+{University of North Carolina at Charlotte}
+{Charlotte--NC}
+{USA}
+{
+	\textbullet~Level: Undergraduate\\
+	\textbullet~No. of students: 2\\
+	\textbullet~Project 1: ``Annotation of the draft genome of the hairy sea cucumber \textit{Sclerodactyla briareus}''\\
+	\textbullet~Project 2: ``Annotation of the draft genome of the hairy sea cucumber \textit{Ophioderma brevispinum}''\\
+	\textbullet~Primary advisor: Professor Daniel Janies\\
+}
+
+\cventry{2020--2021}
+{College of Computing and Informatics}
+{University of North Carolina at Charlotte}
+{Charlotte--NC}
+{USA}
+{
+	\textbullet~Level: Master's (project 1) and undergraduate (project 2)\\
+	\textbullet~No. of students: 2\\
+	\textbullet~Project 1: ``The  fundamental evolution of SARS-CoV-2 and other coronaviruses''\\
+	\textbullet~Project 2: ``Genomic epidemiology of SARS-CoV-2''\\
+	\textbullet~Primary advisor: Professor Daniel Janies\\
+}
+
+\cventry{2019--2020}
+{Interunites Graduate Program in Bioinformatics}
+{University of São Paulo}
+{São Paulo--SP}
+{Brazil}
+{
+	\textbullet~Level: Master's\\
+	\textbullet~No. of students: 1\\
+	\textbullet~Project: ``The assembly of the genome of the eastern spadefoot toad, \emph{Scaphiopus holbrookii}''\\
+	\textbullet~Primary advisor: Professor Taran Grant\\
+}
+
+\cventry{---}
+{College of Computing and Informatics}
+{University of North Carolina at Charlotte}
+{Charlotte--NC}
+{USA}
+{
+	\textbullet~Level: Master's\\
+	\textbullet~No. of students: 2\\
+	\textbullet~Project 1: ``FLAVi-Web: a web annotator for viral genomes of \emph{Flaviviridae}''\\
+	\textbullet~Project 2: ``Assembly and annotation of repetitive DNA in the genome of the golden poison dart frog, \emph{Phylobates terribilis}''\\
+	\textbullet~Primary advisor: Professor Daniel Janies\\
+}
+
+\cventry{---}
+{The University Honors Program}
+{University of North Carolina at Charlotte}
+{Charlotte--NC}
+{USA}
+{
+	\textbullet~Level: Undergraduate\\
+	\textbullet~No. of students: 1\\
+	\textbullet~Project: ``Repetitive DNA and tissue regeneration in echinoderms''\\
+	\textbullet~Primary advisor: Professor Daniel Janies\\
+}
+
+\vspace{.5em}
+	\subsection{\textsc{Teaching Interests}}
+\vspace{.5em}
+
+There are a number of courses that interest me in the Department's Master's and Doctorate programs. I am particularly motivated and qualified to teach technical and methodological courses on \textbf{biostatistics}, \textbf{database systems}, \textbf{big data analyses}, and \textbf{health informatics}. I am also interested in courses such as \textbf{environmental health} and \textbf{epidemiology of infectious diseases}.
+
+\vspace{0.5em}
+
+I am interest in proposing new courses on \textbf{One Health} and \textbf{genomic epidemiology}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% SHORT TERM COURSES %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Training and Certifications}
+	\cventry{2011}
+		{The Willi Hennig Society 12th International Workshop in Phylogenetic Methods}
+		{Instituto de Ecología}
+		{Xalapa--Veracruz}
+		{Mexico}
+		{
+			\textbullet~Duration: 40h\\
+			\textbullet~Support: The Willi Hennig Society
+		}
+
+	\cventry{2010}
+		{Theory and Practice in Phylogenetic Reconstruction}
+		{Institute of Biosciences, University of São Paulo}
+		{São Paulo--SP}
+		{Brazil}
+		{
+			\textbullet~Duration: 80h
+		}
+
+	\cventry{2009}
+		{Foundations of Systematics and Biogeography}
+		{Institute of Biosciences, University of São Paulo}
+		{São Paulo--SP}
+		{Brazil}
+		{
+			\textbullet~Duration: 80h
+		}
+
+	\cventry{2006}
+		{Systematics}
+		{Universidade Estadual Paulista ``Júlio de Mesquita Filho''}
+		{São Vicente--SP}
+		{Brazil}
+		{
+			\textbullet~Duration: 40h
+		}
+
+%%%%%%%%%%%%%%
+%% REVIEWER %%
+%%%%%%%%%%%%%%
+
+\section{Editorial Roles}
+
+    \cvline{2021--current}
+	    {\textbf{Review Editor}: Frontiers in Bioinformatic and Predictive Virology}
+	\cvline{---}
+	    {\textbf{Review Editor}: Frontiers in Extreme Microbiology}
+	\cvline{---}
+	    {\textbf{Review Editor}: Frontiers in Evolutionary and Genomic Microbiology}
+
+\vspace{0.5em}
+
+See my Loop profile at  \href{https://loop.frontiersin.org/people/1352271/overview}{loop.frontiersin.org/people/1352271/overview}.
+
+\section{Reviews}
+
+    I have completed 33 reviews of 31 manuscripts in 12 academic journals:\\
+    \begin{multicols}{2}
+    {\footnotesize
+    \cvline{10}{Frontiers in Microbiology}
+    \cvline{4}{BMC Medical Genomics}
+    \cvline{3}{Molecular Biology and Evolution}
+    \cvline{2}{Mitochondrial DNA Part A}
+    \cvline{2}{Molecular and Cellular Biochemistry}
+    \cvline{2}{PeerJ}
+    \cvline{1}{Anais da Academia Brasileira de Ciencias}
+    \cvline{1}{BMC Evolutionary Biology}
+    \cvline{1}{Clinical and Translational Medicine}
+    \cvline{1}{Ecology and Evolution}
+    \cvline{1}{Foundations of Science}
+    \cvline{1}{Frontiers in Bioinformatics}
+    \cvline{1}{Frontiers in Virology}
+    \cvline{1}{Infection, Genetics and Evolution}
+    \cvline{1}{Life}
+    \cvline{1}{Mitochondrial DNA Part B}
+    }
+    \end{multicols}
+    For more details, see my Publons profile at  \href{https://publons.com/researcher/665479/denis-jacob-machado/}{publons.com/researcher/665479/denis-jacob-machado}.
+
+%%%%%%%%%%%%%%%
+%% LANGUAGES %%
+%%%%%%%%%%%%%%%
+
+\section{Skills}
+
+\subsection{Languages}
+
+	\cvlanguage{Portuguese}{Native}{}
+	\cvlanguage{English}{Fluent}{}
+ 	\cvlanguage{Spanish}{Proficient}{}
+
+%%%%%%%%%%%%
+%% CODING %%
+%%%%%%%%%%%%
+
+\subsection{Skills in Computational Biology}
+
+Concepts used in my current and past projects include high-performance computing, high-throughput nucleotide sequencing, machine learning, protein-protein interaction, protein structure, antibodies, gene expression analyses, metagenomics, Python pipelines, R Shiny web apps, cloud-based applications (Microsoft Azure and AWS), high-performance computing, high-throughput nucleotide sequencing, and machine learning.
+
+\vspace{0.5em}
+
+	\cvline{Languages}
+		{\small ~\texttt{Bash},~\texttt{R} (including Shiny applicarions),~\texttt{Python},~\texttt{Perl},~{SQL},~\texttt{JavaScript},~\texttt{Java},~\texttt{PHP},~and~\texttt{Haskell}}
+	\cvline{Tools}
+        {\small ~\texttt{AlphaFold2},~\texttt{RoseTTAFold},~\texttt{HADDOCK},~\texttt{Tableu},~{Flask},~\texttt{Git},~\texttt{Java},~\texttt{Jupyter},~and~\LaTeX}
+
+\subsection{Cluster Management}
+
+I have build and managed different computer clusters design for the analyses of biological data from multi-omics research.
+
+	\cventry{2013--current}
+		{ACE}
+		{University of São Paulo}
+		{São Paulo -- SP}
+		{Brazil}
+		{
+			\textbullet~\emph{Ace} is a FAPESP-funded SGI cluster housed in the Museum of Zoology\\
+			\textbullet~Homepage: \href{https://www.ib.usp.br/grant/anfibios/researchHPC.html}{www.ib.usp.br/gran}
+		}
+	\cventry{2009--2013}
+		{Abacus}
+		{University of São Paulo}
+		{São Paulo -- SP}
+		{Brazil}
+		{
+			\textbullet~\emph{Abacus} is a FAPESP-funded Beowolf cluster housed in the Institute of Biosciences\\
+			\textbullet~Homepage: \href{https://www.ib.usp.br/hpc/}{www.ib.usp.br/hpc}
+		}
+
+\subsection{Software Development}
+
+	\begin{flushleft}
+		{Most of my published software are available under an open-source license at:}
+	\end{flushleft}
+
+	\cvline{GitLab}
+		{\href{https://gitlab.com/MachadoDJ}{gitlab.com/MachadoDJ}}
+	\cvline{GitHub}
+		{\href{https://github.com/machadodj}{github.com/machadodj}}
+	\cvline{Web}
+		{\href{https://grant.ib.usp.br/anfibios/researchSoftware.html}{grant.ib.usp.br/anfibios}}
+
+\section{Online Research Profile}
+
+\cvline{\textbf{LinkedIn}}{\href{https://www.linkedin.com/in/machadodj}{linkedin.com/in/machadodj}}
+
+\cvline{\textbf{ORCID}}{\href{https://orcid.org/0000-0001-9858-4515}{0000-0001-9858-4515}}
+
+\cvline{\textbf{ResearcherID}}{I-1452-2015}
+
+\cvline{\textbf{Publons}}{\href{https://publons.com/researcher/665479/denis-jacob-machado/}{publons.com/researcher/665479}}
+
+\cvline{\textbf{Scopus}}{\href{https://www.scopus.com/authid/detail.uri?authorId=55958393200}{https://www.scopus.com/authid/detail.uri?authorId=55958393200}}
+
+\cvline{\textbf{G Scholar}}{\href{https://scholar.google.com/citations?user=RSChnSQAAAAJ\&hl=en}{scholar.google.com/citations?user=RSChnSQAAAAJ\&hl=en9}}
+
 \end{document}

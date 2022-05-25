@@ -16,7 +16,11 @@ The command above should create the file `main.pdf`.
 
 ## How can I get the dependencies?
 
-### macOS
+## moderncv
+
+You will need **moderncv**, a modern curriculum vitae class for LaTeX available from [GitHub](https://github.com/moderncv).
+
+### Other dependencies in macOS
 
 In macOS, you can get pdflatx with [brew](https://brew.sh/):
 
@@ -32,7 +36,7 @@ $ which pdflatex
 
 If the location ios empty, try to relaunch the terminal app.
 
-## Ubuntu
+### Other dependencies in Ubuntu
 
 On Linux Ubuntu, you may install LaTeX using `apt`:
 
