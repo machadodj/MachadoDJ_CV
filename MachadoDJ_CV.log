@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.5)  19 AUG 2022 15:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.5)  23 FEB 2023 17:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1002,24 +1002,55 @@ LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <10> not available
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 303.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 315.
+
+
+Overfull \hbox (17.84116pt too wide) has occurred while \output is active
+ []|[] 
+ []
 
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
-nput line 308.
+nput line 320.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd
 )
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 308.
+nput line 320.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd
-) [2
+)
+
+Package fancyhdr Warning: \footskip is too small (45.0pt): 
+(fancyhdr)                Make it at least 54.40001pt, for example:
+(fancyhdr)                \setlength{\footskip}{54.40001pt}.
+
+[2
 
 
-] [3]
+]
+Overfull \hbox (17.84116pt too wide) has occurred while \output is active
+ []|[] 
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (45.0pt): 
+(fancyhdr)                Make it at least 54.40001pt, for example:
+(fancyhdr)                \setlength{\footskip}{54.40001pt}.
+
+[3]
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <12> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 442.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 460.
+
+
+Overfull \hbox (17.84116pt too wide) has occurred while \output is active
+ []|[] 
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (45.0pt): 
+(fancyhdr)                Make it at least 54.40001pt, for example:
+(fancyhdr)                \setlength{\footskip}{54.40001pt}.
 
 [4]
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1027,172 +1058,280 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 509.
+(Font)              <7> on input line 533.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 509.
+(Font)              <5> on input line 533.
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--559
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 582--582
+Underfull \hbox (badness 10000) in paragraph at lines 583--583
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--594
-
+Overfull \hbox (17.84116pt too wide) has occurred while \output is active
+ []|[] 
  []
+
+
+Package fancyhdr Warning: \footskip is too small (45.0pt): 
+(fancyhdr)                Make it at least 54.40001pt, for example:
+(fancyhdr)                \setlength{\footskip}{54.40001pt}.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 605--605
+Underfull \hbox (badness 10000) in paragraph at lines 606--606
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 628--628
+Underfull \hbox (badness 10000) in paragraph at lines 618--618
 
  []
 
-[6] [7] [8
+
+Underfull \hbox (badness 10000) in paragraph at lines 629--629
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 652--652
+
+ []
+
+
+Overfull \hbox (17.84116pt too wide) has occurred while \output is active
+ []|[] 
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (45.0pt): 
+(fancyhdr)                Make it at least 54.40001pt, for example:
+(fancyhdr)                \setlength{\footskip}{54.40001pt}.
+
+[6]
+Overfull \hbox (17.84116pt too wide) has occurred while \output is active
+ []|[] 
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (45.0pt): 
+(fancyhdr)                Make it at least 54.40001pt, for example:
+(fancyhdr)                \setlength{\footskip}{54.40001pt}.
+
+[7]
+Overfull \hbox (17.84116pt too wide) has occurred while \output is active
+ []|[] 
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (45.0pt): 
+(fancyhdr)                Make it at least 54.40001pt, for example:
+(fancyhdr)                \setlength{\footskip}{54.40001pt}.
+
+[8]
+Overfull \hbox (17.84116pt too wide) has occurred while \output is active
+ []|[] 
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (45.0pt): 
+(fancyhdr)                Make it at least 54.40001pt, for example:
+(fancyhdr)                \setlength{\footskip}{54.40001pt}.
+
+[9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1001--1001
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1014--1014
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1027--1027
-
- []
-
-[9]
 Underfull \hbox (badness 10000) in paragraph at lines 1039--1039
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1052--1052
-
+Overfull \hbox (17.84116pt too wide) has occurred while \output is active
+ []|[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1064--1064
-
- []
+Package fancyhdr Warning: \footskip is too small (45.0pt): 
+(fancyhdr)                Make it at least 54.40001pt, for example:
+(fancyhdr)                \setlength{\footskip}{54.40001pt}.
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 1137--1139
+Underfull \hbox (badness 10000) in paragraph at lines 1058--1058
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1090--1090
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1102--1102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1115--1115
+
+ []
+
+
+Overfull \hbox (17.84116pt too wide) has occurred while \output is active
+ []|[] 
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (45.0pt): 
+(fancyhdr)                Make it at least 54.40001pt, for example:
+(fancyhdr)                \setlength{\footskip}{54.40001pt}.
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 1127--1127
+
+ []
+
+
+Overfull \hbox (17.84116pt too wide) has occurred while \output is active
+ []|[] 
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (45.0pt): 
+(fancyhdr)                Make it at least 54.40001pt, for example:
+(fancyhdr)                \setlength{\footskip}{54.40001pt}.
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1202
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 1140.
+(Font)              <9> on input line 1203.
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1140--1140
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1203--1203
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1141--1141
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1204--1204
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1142--1142
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1205--1205
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1143--1143
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1206--1206
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1144--1144
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1207--1207
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1145--1145
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1208--1208
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1146--1146
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1209--1209
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1147--1147
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1210--1210
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1148--1148
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1211--1211
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1149--1149
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1212--1212
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1150--1150
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1213--1213
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1151--1151
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1214--1214
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1152--1152
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1215--1215
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1153--1153
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1216--1216
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1154--1154
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1217--1217
 [][] 
  []
 
 
-Overfull \hbox (255.242pt too wide) in paragraph at lines 1155--1155
+Overfull \hbox (255.242pt too wide) in paragraph at lines 1218--1218
 [][] 
  []
 
-[11]
-Overfull \hbox (2.14752pt too wide) in paragraph at lines 1229--1229
+
+Overfull \hbox (17.84116pt too wide) has occurred while \output is active
+ []|[] 
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (45.0pt): 
+(fancyhdr)                Make it at least 54.40001pt, for example:
+(fancyhdr)                \setlength{\footskip}{54.40001pt}.
+
+[13]
+Overfull \hbox (2.14752pt too wide) in paragraph at lines 1292--1292
  []|[]\OT1/cmss/bx/n/10.95 (-20) ResearcherID[]|
  []
 
-[12] (./MachadoDJ_CV.aux)
+
+Overfull \hbox (17.84116pt too wide) has occurred while \output is active
+ []|[] 
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (45.0pt): 
+(fancyhdr)                Make it at least 54.40001pt, for example:
+(fancyhdr)                \setlength{\footskip}{54.40001pt}.
+
+[14] (./MachadoDJ_CV.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 13.12pt have occurred.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `MachadoDJ_CV.out' has not changed.
-(rerunfilecheck)             Checksum: EA6CFA8708D8CE2BFEF688D53ECA18E2;4114.
+(rerunfilecheck)             Checksum: 9E3969E2403496000F639FE06A02BF19;4119.
  ) 
 Here is how much of TeX's memory you used:
- 26639 strings out of 478268
- 512971 string characters out of 5846348
- 818299 words of memory out of 5000000
- 44063 multiletter control sequences out of 15000+600000
- 490779 words of font info for 213 fonts, out of 8000000 for 9000
+ 26664 strings out of 478268
+ 513203 string characters out of 5846348
+ 819309 words of memory out of 5000000
+ 44064 multiletter control sequences out of 15000+600000
+ 491599 words of font info for 224 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  129i,13n,122p,1009b,561s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
@@ -1214,10 +1353,10 @@ c/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
 /cm-super/sfsl1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/c
 m-super/sfss1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-
 super/sfss1095.pfb>
-Output written on MachadoDJ_CV.pdf (12 pages, 229889 bytes).
+Output written on MachadoDJ_CV.pdf (14 pages, 234892 bytes).
 PDF statistics:
- 363 PDF objects out of 1000 (max. 8388607)
- 315 compressed objects within 4 object streams
- 48 named destinations out of 1000 (max. 500000)
+ 381 PDF objects out of 1000 (max. 8388607)
+ 331 compressed objects within 4 object streams
+ 50 named destinations out of 1000 (max. 500000)
  52005 words of extra memory for PDF output out of 61914 (max. 10000000)
 
