@@ -1,22 +1,22 @@
-# MachadoDJ-CV
+# MachadoDJ_Resume
 
 ## What is inside?
 
-Enclosed, you will find the curriculum vitae of Denis Jacob Machado, Ph.D., written in LaTeX using the ModernCV's casual style.
+Enclosed, you will find the resume of Denis Jacob Machado, Ph.D., written in LaTeX using ModernCV's casual style.
 
 ## How to compile?
 
 To produce the final PDF file, navigate to the leading directory and run the following command:
 
 ```bash
-$ pdflatex main.tex
+$ pdflatex MachadoDJ_Resume.tex
 ```
 
-The command above should create the file `main.pdf`.
+The command above should create the file `MachadoDJ_Resume.pdf`.
 
 ## How can I get the dependencies?
 
-## moderncv
+### moderncv
 
 You will need **moderncv**, a modern curriculum vitae class for LaTeX available from [GitHub](https://github.com/moderncv).
 
@@ -46,4 +46,4 @@ $ sudo apt-get install texlive-latex-extra
 
 ## How can I modify this project?
 
-The main file is `main.tex`. It calls for different sections of the CV, each one at a different file inside the `tex/` directory. All `.tex` fils contain coments that may help modifying this CV at your will.
+The main file is `MachadoDJ_Resume.tex`. It calls for different sections of the CV, each one in a different file inside the `tex/` directory. All `.tex` files contain comments that may help modify this CV at your will.
